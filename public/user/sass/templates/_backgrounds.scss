@@ -1,0 +1,25 @@
+
+.bg-2 {
+	background: url("../images/athlete-black-and-white-body-1431283.jpg")repeat;
+	background-size: cover;
+}
+
+.bg-3 {
+	background: url("../images/834288.jpg") ;
+	background-size: cover;
+}
+
+.bg-5 {
+	background: url("../images/bg/bg-7.jpg") ;
+	background-size: cover;
+}
+
+
+
+.bg-4 {
+	background: url("../images/juan-pablo-rodriguez-X6jtULYJQz8-unsplash.jpg") no-repeat;
+	background-size: cover;
+	@extend .overly;
+}
+
+
