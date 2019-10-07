@@ -70,7 +70,12 @@
                 <i class="fas fa-shopping-cart"></i> Fitness Tips
               </a>
             </li>-->
-
+            <li class="nav-item">
+                <a class="nav-link" href="/packages">
+                   <i class="far fa-grin-tongue-squint"></i>
+                   Membership
+                </a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="/accounts">
                 <i class="far fa-user"></i> Accounts
@@ -86,10 +91,10 @@
                 aria-haspopup="true"
                 aria-expanded="false">
                 <i class="fas fa-cog"></i>
-                <span> Settings <i class="fas fa-angle-down"></i> </span>
+                <span> History <i class="fas fa-angle-down"></i> </span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="/pastorder">Pastorder</a>
                 <a class="dropdown-item" href="#">Billing</a>
                 <a class="dropdown-item" href="#">Customize</a>
               </div>
