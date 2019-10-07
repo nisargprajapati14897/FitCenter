@@ -118,9 +118,7 @@
                   <tr>
                     <th scope="col">&nbsp;</th>
                     <th scope="col">PRODUCT NAME</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">IN STOCK</th>
-                    <th scope="col">EXPIRE DATE</th>
+                    <th scope="col">PRICE</th>
                     <th scope="col">&nbsp;</th>
                   </tr>
                 </thead>
@@ -129,28 +127,23 @@
 
                 <tr>
                     <th scope="row"></th>
-                    <td class="tm-product-name">{{ $value->productname }}</td>
+                    <td class="tm-product-name">{{ $value->name }}</td>
                     <td>{{ $value->price }}</td>
-                    <td>{{ $value->stock }}</td>
-                    <td>{{ $value->expireydate }}</td>
                     <td>
-                      <a href= "/products/{{$value->id}}"   class="tm-product-delete-link">
+                      <a href= "/packages/{{$value->p_id}}"   class="tm-product-delete-link">
                         <i class="far fa-trash-alt tm-product-delete-icon"></i>
                       </a>
                     </td>
-                  </tr>
+                </tr>
                   @endforeach
 
                 </tbody>
               </table>
             </div>
             <!-- table container -->
-            <a
-              href="/add-product"
-              class="btn btn-primary btn-block text-uppercase mb-3">Add new product
-            </a>
+            <a href="/add-packages" class="btn btn-primary btn-block text-uppercase mb-3">Add new Package</a>
             
-            <a href="/update-product" class="btn btn-primary btn-block text-uppercase mb-3">Update Product</a>
+            <a href="/update-package" class="btn btn-primary btn-block text-uppercase mb-3">Update Packages</a>
           </div>
         </div>
     </div>

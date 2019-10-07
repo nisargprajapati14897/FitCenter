@@ -27,7 +27,7 @@
     <nav class="navbar navbar-expand-xl">
       <div class="container h-100">
         <a class="navbar-brand" href="#">
-          <h1 class="tm-site-title mb-0">Product Admin</h1>
+          <h1 class="tm-site-title mb-0">Equipment Admin</h1>
         </a>
         <button
           class="navbar-toggler ml-auto mr-0"
@@ -115,7 +115,7 @@
           <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
             <div class="row">
               <div class="col-12">
-                <h2 class="tm-block-title d-inline-block">Add Product</h2>
+                <h2 class="tm-block-title d-inline-block">Update Equipment</h2>
               </div>
             </div>
             <div class="row tm-edit-product-row">
@@ -195,18 +195,6 @@
                   />
                   <br>
                   <br>
-                  <div class="form-group mb-3">
-                    <label
-                      for="name"
-                      > Product id
-                    </label>
-                    <input
-                      id="pid"
-                      name="pid"
-                      type="text"
-                      class="form-control validate"
-                      required
-                    />
                   </div>
                 </div>
               </div>

@@ -162,6 +162,24 @@ class Controller extends BaseController
        return redirect('/doctors');
     }
 
+    function packagesinsert(Request $request)
+    {
+       $packagename = $request->input('name');
+       $price = $request->input('price');
+       $validity = $request->input('validity');
+       $toverview = $request->input('toverview');
+       $foundation = $request->input('foundation');
+       $begineer = $request->input('begineer');
+       $olympic = $request->input('olympic');
+       $steam = $request->input('steam');
+
+       $data = array('name'=>$packagename,'price'=>$price,'vadility'=>$validity,'Training_overview'=>$toverview,'Foundation_Training'=>$foundation,'Begineers_Classes'=>$begineer,'Olympic_weighlifting'=>$olympic,'Steam_bath_and_Sulu_bath'=>$steam);
+
+       DB::table('packages')->insert($data);
+       
+       return redirect('/products');
+    }
+
     function doctorupdate(Request $request)
     {
         $doctorname = $request->input('name');
@@ -428,6 +446,33 @@ class Controller extends BaseController
     
         return view('user.doccheckoutform')->with('data',$data);
     
+    }
+
+
+    public function changestatus($id) {
+
+    
+        $data = DB::table('checkoutform')->where('id',$id)->get();
+        
+        if($data[0]->orderstatus=='pending')
+        {
+           $d = array('name'=>$data[0]->name,'email'=>$data[0]->email,'phone'=>$data[0]->phone,'apartment'=>$data[0]->apartment,'area'=>$data[0]->area,'landmark'=>$data[0]->landmark,'city'=>$data[0]->city,'pincode'=>$data[0]->pincode,'state'=>$data[0]->state,'productname'=>$data[0]->productname,'price'=>$data[0]->price,'orderstatus'=>'active');
+
+            DB::table('checkoutform')->where('id',$id)->update($d);
+            return redirect('/index');
+
+        }
+        else
+        {
+         $d = array('name'=>$data[0]->name,'email'=>$data[0]->email,'phone'=>$data[0]->phone,'apartment'=>$data[0]->apartment,'area'=>$data[0]->area,'landmark'=>$data[0]->landmark,'city'=>$data[0]->city,'pincode'=>$data[0]->pincode,'state'=>$data[0]->state,'productname'=>$data[0]->productname,'price'=>$data[0]->price,'orderstatus'=>'delievred','oder_id'=>$data[0]->id);
+         DB::table('pastorder')->insert($d);
+
+         DB::table('checkoutform')->where('id',$id)->delete();
+
+         return redirect('/index');
+
+       
+        }
     }
 
   }

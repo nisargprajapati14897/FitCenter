@@ -61,14 +61,6 @@ Route::get('ucart', function () {
     return view('user.cart')->with('data', $data);
 });
 
-
-// Route::get('checkoutform', function () {
-//     $data = DB::table('checkoutform')->select('*')->get();
-//     return view('user.checkoutform')->with('data', $data);
-// });
-
-
-
 Route::get('ufitnesstips', function () {
     return view('user.fitnesstips');
 });
@@ -78,7 +70,8 @@ Route::get('ujoinus', function () {
 });
 
 Route::get('upricing', function () {
-    return view('user.pricing');
+    $data = DB::table('packages')->select('*')->get();
+    return view('user.pricing')->with('data',$data);
 });
 
 Route::get('usendmail', function () {
@@ -108,7 +101,6 @@ Route::post('registration', function (Illuminate\Http\Request $request) {
             ->withErrors($validator)
             ->withInput();
     }
-    // Recipe is valid; proceed to save it
    });
 
 Route::get('/login', function () {
@@ -126,7 +118,6 @@ Route::post('login', function (Illuminate\Http\Request $request) {
             ->withErrors($validator)
             ->withInput();
     }
-    // Recipe is valid; proceed to save it
    });
 
 Route::get('/forgotpassword', function () {
@@ -153,6 +144,15 @@ Route::get('/add-product', function () {
     return view('admin.add-product');
 });
 
+Route::get('/add-packages', function () {
+    return view('admin.add-packages');
+});
+
+Route::get('/packages', function () {
+    $data = DB::table('packages')->select('*')->get();
+    return view('admin.packages')->with('data', $data);
+});
+
 Route::get('/update-equipment', function () {
     return view('admin.update-equipment');
 });
@@ -171,8 +171,12 @@ Route::get('/edit-product', function () {
 
 Route::get('/index', function () {
     $data = DB::table('checkoutform')->select('*')->get();
-
     return view('admin.index')->with('data',$data);
+});
+
+Route::get('/pastorder', function () {
+    $data = DB::table('pastorder')->select('*')->get();
+    return view('admin.pastorder')->with('data',$data);
 });
 
 Route::get('/products', function () {
@@ -222,6 +226,8 @@ Route::get('/products/{id}', 'Controller@destroy');
 Route::get('/equipments/{id}', 'Controller@equipmentdestroy');
 Route::get('/doctors/{id}', 'Controller@doctordestroy');
 
+Route::post('/add-packages','Controller@packagesinsert');
+
 Route::get('/checkoutform/{id}', 'Controller@checkoutform');
 Route::get('/equicheckoutform/{id}', 'Controller@equicheckoutform');
 Route::get('/doccheckoutform/{id}', 'Controller@doccheckoutform');
@@ -230,9 +236,10 @@ Route::post('/accounts','Controller@accountupdate');
 
 Route::post('/cart','Controller@cart');
 
-//Route::post('/checkoutform', 'controller@sendpaymentmail');
 Route::post('/checkoutform/{id}','Controller@orderinsert');
 Route::post('/equicheckoutform/{id}','Controller@orderinsert2');
 Route::post('/doccheckoutform/{id}','Controller@orderdoctor');
+
+Route::get('/changestatus/{id}','Controller@changestatus');
 
    

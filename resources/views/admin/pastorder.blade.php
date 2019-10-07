@@ -146,11 +146,9 @@
                                     <td>{{ $value->area }}</td>
                                     <td>{{ $value->landmark }}</td>
                                     <td>{{ $value->city }}</td>
-                                    @if($value->orderstatus == 'pending')
-                                    <td><a href= "/changestatus/{{$value->id}}"><button class="btn btn-primary btn-block text-uppercase">active</button> </a> </td>
-                                    @else
-                                    <td>  <a href= "/changestatus/{{$value->id}}"><button class="btn btn-primary btn-block text-uppercase">delievred</button> </a> </td>
-                                    @endif
+                                    <td>
+                                        <a href= ""><button class="btn btn-primary btn-block text-uppercase">delievred</button> </a> </td>
+                                    </td>
 
                                 </tr>
                                 
@@ -167,7 +165,7 @@
                 <p class="text-center text-white mb-0 px-4 small">
                     Copyright &copy; <b>2019</b> All rights reserved. 
                     
-                    Design By: <a rel="nofollow noopener" href="https://templatemo.com" class="tm-footer-link">Students of LJ</a>
+                    Design By: <a rel="nofollow noopener" href="https://lj.com" class="tm-footer-link">Students of LJ</a>
                 </p>
             </div>
         </footer>
