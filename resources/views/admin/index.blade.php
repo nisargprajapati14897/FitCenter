@@ -53,6 +53,7 @@
                                 <a class="dropdown-item" href="/products">Health Products</a>
                                 <a class="dropdown-item" href="/equipments">Gym Equipments</a>
                                 <a class="dropdown-item" href="/doctors">Doctor</a>
+                                <a class="dropdown-item" href="/packages">Membership</a>
                             </div>
                         </li>
                         <!--<li class="nav-item">
@@ -62,9 +63,9 @@
                             </a>
                         </li>-->
                         <li class="nav-item">
-                            <a class="nav-link" href="/packages">
+                            <a class="nav-link" href="/membershipstatus">
                                 <i class="far fa-grin-tongue-squint"></i>
-                                Membership
+                                Membership Status
                             </a>
                         </li>
                         <li class="nav-item">
@@ -81,9 +82,8 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/pastorder">Pastorder</a>
-                                <a class="dropdown-item" href="#">Billing</a>
-                                <a class="dropdown-item" href="#">Customize</a>
-                            </div>
+                                <a class="dropdown-item" href="/doctorstatus">Doctor Status</a>
+                            </div>  
                         </li>
                     </ul>
                     <ul class="navbar-nav">
@@ -103,7 +103,7 @@
                     <p class="text-white mt-5 mb-5">Welcome back     <b>Admin</b></p>
                 </div>
             </div>
-            <!-- row -->
+            <!-- row 1-->
             
                 <div class="col-12 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
@@ -158,8 +158,9 @@
                         </table>
                     </div>
                 </div>
-            </div>
+           </div>
         </div>
+
         <footer class="tm-footer row tm-mt-small">
             <div class="col-12 font-weight-light">
                 <p class="text-center text-white mb-0 px-4 small">

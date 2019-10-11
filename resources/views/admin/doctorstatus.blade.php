@@ -83,7 +83,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/pastorder">Pastorder</a>
                                 <a class="dropdown-item" href="/doctorstatus">Doctor Status</a>
-                            </div>
+                            </div>  
                         </li>
                     </ul>
                     <ul class="navbar-nav">
@@ -103,18 +103,17 @@
                     <p class="text-white mt-5 mb-5">Welcome back     <b>Admin</b></p>
                 </div>
             </div>
-            <!-- row -->
+            <!-- row 2-->
             
-                <div class="col-12 tm-block-col">
+<div class="col-12 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
-                        <h2 class="tm-block-title">Pastorder List</h2>
+                        <h2 class="tm-block-title">Doctor's Appointment List</h2>
                         <table class="table">
                             <thead>
 
                                 <tr>
-                                    <th scope="col">ORDER ID</th>
-                                    <th scope="col">STATUS</th>
-                                    <th scope="col">PRODUCTNAME</th>
+                                    <th scope="col">Doctor ID</th>
+                                    <th scope="col">DOCTORNAME</th>
                                     <th scope="col">PRICE</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">phone</th>
@@ -122,8 +121,6 @@
                                     <th scope="col">Area</th>
                                     <th scope="col">Landmark</th>
                                     <th scope="col">City</th>
-                                    <th scope="col">changestatus</th>
-
                                 </tr>
                             </thead>
                             <tbody>
@@ -131,12 +128,9 @@
 
                                 <tr>
                                     <th scope="row"><b>{{ $value->id }}</b></th>
-                                    <td>
-                                        <div class="tm-status-circle moving">
-                                        </div>{{ $value->orderstatus }}
+                                    <td><b>{{ $value->doctorname }}</b>
                                     </td>
-                                    <td><b>{{ $value->productname }}</b></td>
-                                    <td><b>{{ $value->price }}</b></td>
+                                    <td><b>{{ $value->consultancycharge }}</b></td>
                                     <td><b>{{ $value->name }}</b></td>
 
                                     <td>{{ $value->phone }}</td>
@@ -144,26 +138,26 @@
                                     <td>{{ $value->area }}</td>
                                     <td>{{ $value->landmark }}</td>
                                     <td>{{ $value->city }}</td>
-                                    <td>
-                                        <a href= ""><button class="btn btn-primary btn-block text-uppercase">delievred</button> </a> </td>
-                                    </td>
-
+                                    
                                 </tr>
                                 
                                 @endforeach
 
                             </tbody>
-                        </table>
+                         </table>
+                      </div>
                     </div>
-                </div>
-            </div>
+                 </div>
+              </div>
+           </div>
         </div>
+
         <footer class="tm-footer row tm-mt-small">
             <div class="col-12 font-weight-light">
                 <p class="text-center text-white mb-0 px-4 small">
                     Copyright &copy; <b>2019</b> All rights reserved. 
                     
-                    Design By: <a rel="nofollow noopener" href="https://lj.com" class="tm-footer-link">Students of LJ</a>
+                    Design By: <a rel="nofollow noopener" href="https://templatemo.com" class="tm-footer-link">Students of LJ</a>
                 </p>
             </div>
         </footer>

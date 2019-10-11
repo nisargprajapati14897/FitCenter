@@ -65,6 +65,7 @@
                  <a class="dropdown-item" href="/products">Health Products</a>
                  <a class="dropdown-item" href="/equipments">Gym Equipments</a>
                  <a class="dropdown-item" href="/doctors">Doctor</a>
+                 <a class="dropdown-item" href="/packages">Membership</a>
               </div>
               </li>
               <!--<li class="nav-item">
@@ -73,9 +74,9 @@
                 </a>
               </li>-->
               <li class="nav-item">
-                <a class="nav-link" href="/packages">
+                <a class="nav-link" href="/membershipstatus">
                    <i class="far fa-grin-tongue-squint"></i>
-                   Membership
+                   Membership Status
                 </a>
               </li>
               <li class="nav-item">
@@ -98,8 +99,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/pastorder">Pastorder</a>
-                <a class="dropdown-item" href="#">Billing</a>
-                <a class="dropdown-item" href="#">Customize</a>
+                <a class="dropdown-item" href="/doctorstatus">Doctor Status</a>
               </div>
               </li>
             </ul>

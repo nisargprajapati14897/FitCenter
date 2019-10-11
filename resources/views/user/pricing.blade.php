@@ -53,7 +53,6 @@
 				  <li><a class="dropdown-item" href="/uproduct">Helth product</a></li>
 				  <li><a class="dropdown-item" href="/uequipment">Gym Equipment</a></li>
 				  <li><a class="dropdown-item" href="/udoctor">Doctor</a></li>
-				  <li><a class="dropdown-item" href="/udoctor">Doctor</a></li>
 				</ul>
 		  </li>
 			 <li class="nav-item"><a class="nav-link" href="/ufitnesstips">Fitness Tips</a></li>
@@ -153,7 +152,7 @@
 									<li class="text-white-50"><i class="ti-close mr-3"></i>Steam bath </li>
 								@endif
 								<br>
-								<a href="/checkoutform"  class="btn btn-main mt-3">Buy Membership</a>
+								<a href="/memcheckout/{{ $value->p_id }}"  class="btn btn-main mt-3">Buy Membership</a>
 							</ul>
 						</div>
 					</div>

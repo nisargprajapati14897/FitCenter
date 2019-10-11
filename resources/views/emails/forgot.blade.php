@@ -1,13 +1,14 @@
 <html>
-<head></head>
+<head>
+<style>
+     h1 {text-align:center;}
+</style>
+</head>
 <body style="background: black; color: white">
 
-
-
- 
 <p>
      <br>
-     <h1>
+     <h1 style="color: red" >
                                           Fit-Center
      </h1>
      <br>

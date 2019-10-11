@@ -388,7 +388,7 @@ class Controller extends BaseController
 
        DB::table('appointment')->insert($data);
        
-       Mail::send( 'emails.payment', ['title' => 'hey', 'content' => 'hello'], function ($m) use ($email) {
+       Mail::send( 'emails.doctor', ['title' => 'hey', 'content' => 'hello'], function ($m) use ($email) {
             
 
         $m->from('nisuprajapati6974@gmail.com', 'nisarg');
@@ -399,6 +399,46 @@ class Controller extends BaseController
 
        return redirect('/uindex');
     }
+
+    function membership(Request $request,$p_id)
+    {
+       $datap = DB::table('packages')->where('p_id',$p_id)->get();
+
+       $name = $request->input('name');
+       $email = $request->input('email');
+       $phone = $request->input('phone');
+       $apartment = $request->input('apartment');
+       $area = $request->input('area');
+       $landmark = $request->input('landmark');
+       $city = $request->input('city');
+       $pincode = $request->input('pincode');
+       $disease = $request->input('disease');
+       $age = $request->input('age');
+
+     
+
+       foreach ($datap as $p) 
+       {
+        $packagename=$p->name;
+        $price=$p->price;
+       }
+
+       $data = array('name'=>$name,'email'=>$email,'phone'=>$phone,'apartment'=>$apartment,'area'=>$area,'landmark'=>$landmark,'city'=>$city,'pincode'=>$pincode,'membershipname'=>$packagename,'price'=>$price,'age'=>$age,'disease'=>$disease,'membershipstatus'=>'pending');
+
+       DB::table('membership')->insert($data);
+       
+       Mail::send( 'emails.membership', ['title' => 'hey', 'content' => 'hello'], function ($m) use ($email) {
+            
+
+        $m->from('nisuprajapati6974@gmail.com', 'nisarg');
+
+        $m->to($email)->subject('Your Membership Details !');
+
+    });
+
+       return redirect('/uindex');
+    }
+
 
     function cart(Request $request)
     {
@@ -415,7 +455,6 @@ class Controller extends BaseController
     function  pdf(Request $request)
     {
         $user = UserDetail::find($request);
-  
         $pdf = PDF::loadView('pdf', compact('user'));
         return $pdf->download('invoice.pdf');
   
@@ -448,6 +487,14 @@ class Controller extends BaseController
     
     }
 
+    public function memcheckout($p_id) {
+
+    
+        $data = DB::table('packages')->where('p_id',$p_id)->get();
+    
+        return view('user.memcheckoutform')->with('data',$data);
+    
+    }
 
     public function changestatus($id) {
 
@@ -474,6 +521,20 @@ class Controller extends BaseController
        
         }
     }
+
+  
+
+       function search(Request $request)
+       {
+           $q = $request->input('q');
+           $data = DB::table('add-product')->where( 'productname', 'LIKE', '%' . $q . '%')->get ();;
+        if (count ( $data ) > 0)
+               return view ( 'user.product' )->with('data',$data);
+       else
+            $data = DB::table('add-product')->select('*')->get();
+            return view ( 'user.product' )->with('data',$data );
+
+       }
 
   }
 

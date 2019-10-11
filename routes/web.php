@@ -13,6 +13,9 @@
 
 /* ---------------------------------------- USER -------------------------------------------*/
 
+use fitcenter_admin\Http\Controllers\Controller;
+use Symfony\Component\Console\Input\Input;
+
 Route::get('uindex', function () {
     return view('user.index');
 });
@@ -179,6 +182,16 @@ Route::get('/pastorder', function () {
     return view('admin.pastorder')->with('data',$data);
 });
 
+Route::get('/membershipstatus', function () {
+    $data = DB::table('membership')->select('*')->get();
+    return view('admin.membershipstatus')->with('data',$data);
+});
+
+Route::get('/doctorstatus', function () {
+    $data = DB::table('appointment')->select('*')->get();
+    return view('admin.doctorstatus')->with('data',$data);
+});
+
 Route::get('/products', function () {
     $data = DB::table('add-product')->select('*')->get();
     return view('admin.products')->with('data', $data);
@@ -227,6 +240,7 @@ Route::get('/equipments/{id}', 'Controller@equipmentdestroy');
 Route::get('/doctors/{id}', 'Controller@doctordestroy');
 
 Route::post('/add-packages','Controller@packagesinsert');
+Route::post('/search','Controller@search');
 
 Route::get('/checkoutform/{id}', 'Controller@checkoutform');
 Route::get('/equicheckoutform/{id}', 'Controller@equicheckoutform');
@@ -235,11 +249,14 @@ Route::get('/doccheckoutform/{id}', 'Controller@doccheckoutform');
 Route::post('/accounts','Controller@accountupdate');
 
 Route::post('/cart','Controller@cart');
+Route::post('/checkoutform','Controller@pdf');
 
 Route::post('/checkoutform/{id}','Controller@orderinsert');
 Route::post('/equicheckoutform/{id}','Controller@orderinsert2');
 Route::post('/doccheckoutform/{id}','Controller@orderdoctor');
+Route::get('/memcheckout/{id}','Controller@memcheckout');
 
 Route::get('/changestatus/{id}','Controller@changestatus');
+Route::post('/membership/{p_id}','Controller@membership');
 
    

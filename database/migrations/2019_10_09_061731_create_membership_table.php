@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePastorderTable extends Migration
+class CreateMembershipTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreatePastorderTable extends Migration
      */
     public function up()
     {
-        Schema::create('pastorder', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('oder_id');
+        Schema::create('membership', function (Blueprint $table) {
+            $table->bigIncrements('mid');
             $table->string('name');
             $table->string('email', 128)->unique();
             $table->string('phone');
@@ -24,11 +23,11 @@ class CreatePastorderTable extends Migration
             $table->string('landmark');
             $table->string('city');
             $table->string('pincode');
-            $table->string('state');
-            $table->string ('productname');
+            $table->string ('membershipname');
             $table->string ('price');
-            $table->string ('orderstatus');       
-            $table->rememberToken();  
+            $table->string ('disease');
+            $table->string ('age');
+            $table->string ('membershipstatus');
             $table->timestamps();
         });
     }
@@ -40,6 +39,6 @@ class CreatePastorderTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pastorder');
+        Schema::dropIfExists('membership');
     }
 }

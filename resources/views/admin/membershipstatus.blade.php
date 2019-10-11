@@ -83,7 +83,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/pastorder">Pastorder</a>
                                 <a class="dropdown-item" href="/doctorstatus">Doctor Status</a>
-                            </div>
+                            </div>  
                         </li>
                     </ul>
                     <ul class="navbar-nav">
@@ -107,14 +107,14 @@
             
                 <div class="col-12 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
-                        <h2 class="tm-block-title">Pastorder List</h2>
+                        <h2 class="tm-block-title">Orders List</h2>
                         <table class="table">
                             <thead>
 
                                 <tr>
-                                    <th scope="col">ORDER ID</th>
+                                    <th scope="col">Membership ID</th>
                                     <th scope="col">STATUS</th>
-                                    <th scope="col">PRODUCTNAME</th>
+                                    <th scope="col">PACKAGENAME</th>
                                     <th scope="col">PRICE</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">phone</th>
@@ -122,7 +122,7 @@
                                     <th scope="col">Area</th>
                                     <th scope="col">Landmark</th>
                                     <th scope="col">City</th>
-                                    <th scope="col">changestatus</th>
+                                    <th scope="col">DATE</th>
 
                                 </tr>
                             </thead>
@@ -130,12 +130,12 @@
                             @foreach($data as $value)
 
                                 <tr>
-                                    <th scope="row"><b>{{ $value->id }}</b></th>
+                                    <th scope="row"><b>{{ $value->mid }}</b></th>
                                     <td>
                                         <div class="tm-status-circle moving">
-                                        </div>{{ $value->orderstatus }}
+                                        </div>{{ $value->membershipstatus }}
                                     </td>
-                                    <td><b>{{ $value->productname }}</b></td>
+                                    <td><b>{{ $value->membershipname }}</b></td>
                                     <td><b>{{ $value->price }}</b></td>
                                     <td><b>{{ $value->name }}</b></td>
 
@@ -144,10 +144,7 @@
                                     <td>{{ $value->area }}</td>
                                     <td>{{ $value->landmark }}</td>
                                     <td>{{ $value->city }}</td>
-                                    <td>
-                                        <a href= ""><button class="btn btn-primary btn-block text-uppercase">delievred</button> </a> </td>
-                                    </td>
-
+                                    <td>{{ $value->created_at }}</td>
                                 </tr>
                                 
                                 @endforeach
@@ -163,7 +160,7 @@
                 <p class="text-center text-white mb-0 px-4 small">
                     Copyright &copy; <b>2019</b> All rights reserved. 
                     
-                    Design By: <a rel="nofollow noopener" href="https://lj.com" class="tm-footer-link">Students of LJ</a>
+                    Design By: <a rel="nofollow noopener" href="https://templatemo.com" class="tm-footer-link">Students of LJ</a>
                 </p>
             </div>
         </footer>

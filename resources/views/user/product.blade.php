@@ -60,6 +60,14 @@
 		   <li class="nav-item"><a class="nav-link" href="/ublog-single">Blog</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/ucontact">Contact</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/uabout">About Us</a></li>
+		   <li>
+			   <form action="{{url('/search')}}" method="POST"  role="search">
+			   {{ csrf_field() }}
+
+			   <input type="text" name="q" placeholder="search product">
+			   <input type="submit" name="submit" value="search">
+			   </form>
+		   </li>
 		</ul>
 		<!--<div class="my-md-0 ml-lg-4 mt-4 mt-lg-0 ml-auto text-lg-right mb-3 mb-lg-0">
 		  <a href="/ucart"><h3 class="text-color mb-0"><i class="ti-shopping-cart mr-2"></i>Cart</h3></a>

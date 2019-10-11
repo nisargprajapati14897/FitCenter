@@ -108,6 +108,9 @@
 				<p class="mb-3">city : {{ $value->city }}</p>
 				<p class="mb-3">pincode : {{ $value->pincode }}</p>
 				<p class="mb-3">state : {{ $value->state }}</p>
+				<p class="mb-3">product : {{ $value->productname }}</p>
+				<p class="mb-3">price : {{ $value->price }}</p>
+
 			</div>
 			
 				<a href=""  class="btn btn-main mt-3" style="width:30%; height:50px; margin-left:33%;">Print</a>
