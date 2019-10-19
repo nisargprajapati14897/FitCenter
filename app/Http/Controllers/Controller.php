@@ -38,21 +38,18 @@ class Controller extends BaseController
     {
         $email = $request->input('username');
         $password = $request->input('password');
+
         $data=DB::select('select id from registration where email=? and password=?',[$email,$password]);
 
         if(count($data))
         {
-          return redirect('/index');
+            return redirect('/index');
         }
         else 
         {
-           // $errors = new MessageBag(['password' => ['Email and/or password invalid.']]);
-            //return Redirect::back()->withErrors($errors)->withInput(Input::except('password'));
             return back()->withErrors('error', 'Wrong Login Details');
 
         }
-          
-
     }
 
     function productinsert(Request $request)
@@ -162,24 +159,6 @@ class Controller extends BaseController
        return redirect('/doctors');
     }
 
-    function packagesinsert(Request $request)
-    {
-       $packagename = $request->input('name');
-       $price = $request->input('price');
-       $validity = $request->input('validity');
-       $toverview = $request->input('toverview');
-       $foundation = $request->input('foundation');
-       $begineer = $request->input('begineer');
-       $olympic = $request->input('olympic');
-       $steam = $request->input('steam');
-
-       $data = array('name'=>$packagename,'price'=>$price,'vadility'=>$validity,'Training_overview'=>$toverview,'Foundation_Training'=>$foundation,'Begineers_Classes'=>$begineer,'Olympic_weighlifting'=>$olympic,'Steam_bath_and_Sulu_bath'=>$steam);
-
-       DB::table('packages')->insert($data);
-       
-       return redirect('/products');
-    }
-
     function doctorupdate(Request $request)
     {
         $doctorname = $request->input('name');
@@ -199,6 +178,43 @@ class Controller extends BaseController
         return redirect('/doctors');
     }
 
+    function packagesinsert(Request $request)
+    {
+       $packagename = $request->input('name');
+       $price = $request->input('price');
+       $validity = $request->input('validity');
+       $toverview = $request->input('toverview');
+       $foundation = $request->input('foundation');
+       $begineer = $request->input('begineer');
+       $olympic = $request->input('olympic');
+       $steam = $request->input('steam');
+
+       $data = array('name'=>$packagename,'price'=>$price,'vadility'=>$validity,'Training_overview'=>$toverview,'Foundation_Training'=>$foundation,'Begineers_Classes'=>$begineer,'Olympic_weighlifting'=>$olympic,'Steam_bath_and_Sulu_bath'=>$steam);
+
+       DB::table('packages')->insert($data);
+       
+       return redirect('/packages');
+    }
+
+
+    function packagesupdate(Request $request)
+    {
+       $packagename = $request->input('name');
+       $price = $request->input('price');
+       $validity = $request->input('validity');
+       $toverview = $request->input('toverview');
+       $foundation = $request->input('foundation');
+       $begineer = $request->input('begineer');
+       $olympic = $request->input('olympic');
+       $steam = $request->input('steam');
+
+       $data = array('name'=>$packagename,'price'=>$price,'vadility'=>$validity,'Training_overview'=>$toverview,'Foundation_Training'=>$foundation,'Begineers_Classes'=>$begineer,'Olympic_weighlifting'=>$olympic,'Steam_bath_and_Sulu_bath'=>$steam);
+
+       DB::table('packages')->where('name',$packagename)->update($data);
+       
+       return redirect('/packages');
+    }
+
     public function destroy($id) {
 
     
@@ -216,6 +232,7 @@ class Controller extends BaseController
         return redirect('/equipments');
     
     }
+    
 
     public function doctordestroy($id) {
 
@@ -226,6 +243,23 @@ class Controller extends BaseController
     
     }
 
+    public function packagesdestroy($id) {
+
+    
+        $data = DB::table('packages')->where('p_id',$id)->delete();
+    
+        return redirect('/packages');
+    
+    }
+
+    public function contactdetailsdestroy($id) {
+
+    
+        $data = DB::table('contact')->where('id',$id)->delete();
+    
+        return redirect('/contact');
+    
+    }
 
 
     function accountupdate(Request $request)
@@ -242,10 +276,7 @@ class Controller extends BaseController
         return redirect('/accounts');
     }
 
-    
-
  
-
     public function sendEmail(Request $request)
     {
 
@@ -322,7 +353,7 @@ class Controller extends BaseController
 
        $data = DB::table('checkoutform')->where('email',$email)->get();
 
-       return view('user.paymentdetails')->with('data', $data);
+       return view('user.paymentdetails')->with('value', $data);
     }
 
     function orderinsert2(Request $request,$id)
@@ -359,8 +390,8 @@ class Controller extends BaseController
 
     });
 
-       $data = DB::table('checkoutform')->where('email',$email)->get();
-       return view('user.paymentdetails')->with('data', $data);
+       $value = DB::table('checkoutform')->where('email',$email)->get();
+       return view('user.paymentdetails')->with('value', $value);
     }
 
     function orderdoctor(Request $request,$id)
@@ -376,13 +407,13 @@ class Controller extends BaseController
        $state = $request->input('state');
        
        $datap = DB::table('doctor')->where('id',$id)->get();
-     
-
+        $emailad=$datap[0]->email;
        foreach ($datap as $p) 
        {
         $pname=$p->doctorname;
         $pprice=$p->consultancycharge;
-       }
+
+    }
 
        $data = array('name'=>$name,'email'=>$email,'phone'=>$phone,'apartment'=>$apartment,'area'=>$area,'landmark'=>$landmark,'city'=>$city,'pincode'=>$pincode,'state'=>$state,'doctorname'=>$pname,'consultancycharge'=>$pprice);
 
@@ -394,6 +425,15 @@ class Controller extends BaseController
         $m->from('nisuprajapati6974@gmail.com', 'nisarg');
 
         $m->to($email)->subject('Your Doctor Details !');
+
+    });
+
+    Mail::send( 'emails.doctor', ['title' => 'hey', 'content' => 'hello'], function ($m) use ($emailad) {
+            
+
+        $m->from('nisuprajapati6974@gmail.com', 'nisarg');
+
+        $m->to($emailad)->subject('Your Doctor Details !');
 
     });
 
@@ -414,8 +454,6 @@ class Controller extends BaseController
        $pincode = $request->input('pincode');
        $disease = $request->input('disease');
        $age = $request->input('age');
-
-     
 
        foreach ($datap as $p) 
        {
@@ -454,11 +492,14 @@ class Controller extends BaseController
 
     function  pdf(Request $request)
     {
-        $user = UserDetail::find($request);
-        $pdf = PDF::loadView('pdf', compact('user'));
+        $data = ['title' => 'Laravel HTML to PDF'];
+        $pdf = PDF::loadView('paymentdetails', $data);
         return $pdf->download('invoice.pdf');
   
       }
+
+
+    
 
       public function checkoutform($id) {
 
@@ -511,18 +552,28 @@ class Controller extends BaseController
         }
         else
         {
-         $d = array('name'=>$data[0]->name,'email'=>$data[0]->email,'phone'=>$data[0]->phone,'apartment'=>$data[0]->apartment,'area'=>$data[0]->area,'landmark'=>$data[0]->landmark,'city'=>$data[0]->city,'pincode'=>$data[0]->pincode,'state'=>$data[0]->state,'productname'=>$data[0]->productname,'price'=>$data[0]->price,'orderstatus'=>'delievred','oder_id'=>$data[0]->id);
-         DB::table('pastorder')->insert($d);
+            $d = array('name'=>$data[0]->name,'email'=>$data[0]->email,'phone'=>$data[0]->phone,'apartment'=>$data[0]->apartment,'area'=>$data[0]->area,'landmark'=>$data[0]->landmark,'city'=>$data[0]->city,'pincode'=>$data[0]->pincode,'state'=>$data[0]->state,'productname'=>$data[0]->productname,'price'=>$data[0]->price,'orderstatus'=>'delievred','oder_id'=>$data[0]->id);
+            DB::table('pastorder')->insert($d);
 
-         DB::table('checkoutform')->where('id',$id)->delete();
-
-         return redirect('/index');
-
-       
+            DB::table('checkoutform')->where('id',$id)->delete();
+            return redirect('/index');
         }
     }
 
-  
+
+    function contact(Request $request)
+    {
+       $name = $request->input('name');
+       $email = $request->input('email');
+       $message = $request->input('message');
+
+       $data = array('name'=>$name,'email'=>$email,'message'=>$message);
+
+       DB::table('contact')->insert($data);
+       
+       return redirect('/uindex');
+    }
+
 
        function search(Request $request)
        {
@@ -533,6 +584,17 @@ class Controller extends BaseController
        else
             $data = DB::table('add-product')->select('*')->get();
             return view ( 'user.product' )->with('data',$data );
+
+       }
+
+       function searchorder(Request $request)
+       {
+           $q = $request->input('q');
+           $data = DB::table('checkoutform')->where( 'name', 'LIKE', '%' . $q . '%')->get ();;
+        if (count ( $data ) > 0)
+               return view ( 'admin.index' )->with('data',$data);
+       else
+            return redirect('/index');
 
        }
 

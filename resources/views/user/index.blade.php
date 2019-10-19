@@ -36,7 +36,7 @@
 
 <nav  class="navbar navbar-expand-lg navigation fixed-top"  id="navbar">
 	<div class="container-fluid">
-	  <a class="navbar-brand" href="/index">
+	  <a class="navbar-brand" href="/uindex">
 	  		<h2 class="text-white text-capitalize"></i>Fit<span class="text-color">Center</span></h2>
 	  </a>
 
@@ -57,9 +57,7 @@
 				  <li><a class="dropdown-item" href="/udoctor">Doctor</a></li>
 				</ul>
 		  </li>
-			 <li class="nav-item"><a class="nav-link" href="/ufitnesstips">Fitness Tips</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/upricing">Memebership</a></li>
-       <li class="nav-item"><a class="nav-link" href="/ublog-single">Blog</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/ucontact">Contact</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/uabout">About Us</a></li>
 		</ul>
@@ -143,7 +141,6 @@
 
 					<p class="mb-4">The perfect solution to the weight loss training program is to follow the comprehensive plan with discipline and effort. Watch what you eat and when you eat. Set up challenging but attainable short-term goals to be accomplished. As you gradually progress, your motivation has to continue.</p>
 
-					<a href="/ublog-single" class="btn btn-main">Learn More<i class="fa fa-angle-right ml-2"></i></a>
 				</div>
 			</div>
 		</div>
@@ -354,72 +351,6 @@
 <!-- Section Testimonial END -->
 
 <!-- Section Course Start -->
-<section class="section course bg-gray">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-8 text-center">
-				<div class="section-title">
-					<div class="divider mb-3"></div>
-					<h2>Popular Courses</h2>
-					<p>We offer more than 35 group exercis, aerobic classes each week.</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-lg-3 col-md-6">
-				<div class="card border-0 rounded-0 p-0 mb-5 mb-lg-0 shadow-sm">
-					<img src="user/images/gallery/course-1.jpg" alt="" class="img-fluid">
-
-					<div class="card-body">
-						<a href="/ucourse-single"><h4 class="font-secondary mb-0">Build Body</h4></a>
-						<p class=" mb-2">Mentor: Jimmy Karter</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6">
-				<div class="card border-0 rounded-0 p-0 mb-5 mb-lg-0 shadow-sm">
-					<img src="user/images/gallery/course-2.jpg" alt="" class="img-fluid">
-
-					<div class="card-body">
-						<a href="/ucourse-single"><h4 class="font-secondary mb-0">Build Body</h4></a>
-						<p class="mb-2">Mentor: Jimmy Karter</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6">
-				<div class="card border-0 rounded-0 p-0 mb-5 mb-lg-0 shadow-sm">
-					<img src="user/images/gallery/course-3.jpg" alt="" class="img-fluid">
-
-					<div class="card-body">
-						<a href="/ucourse-single"><h4 class="font-secondary mb-0">Build Body</h4></a>
-						<p class=" mb-2">Mentor: Jimmy Karter</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="card border-0 rounded-0 p-0 mb-5 mb-lg-0 shadow-sm">
-					<img src="user/images/gallery/course-2.jpg" alt="" class="img-fluid">
-
-					<div class="card-body">
-						<a href="/ucourse-single"><h4 class="font-secondary mb-0">Build Body</h4></a>
-						<p class=" mb-2">Mentor: Jimmy Karter</p>
-					</div>
-				</div>
-			</div>
-
-		</div>
-		<div class="row justify-content-center">
-			<div class="col-lg-8">
-				<div class="mt-5 text-center">
-					<a href="/ucourse" class="btn btn-main">See all our Courses</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
 <!-- Section Course ENd -->
 
 <!-- Section Footer Start -->
@@ -437,14 +368,12 @@
 
 			<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
 				<div class="footer-widget recent-blog">
-					<h4 class="mb-4 text-white letter-spacing text-uppercase">Recents Posts</h4>
+					<h4 class="mb-4 text-white letter-spacing text-uppercase">Our Moto</h4>
 					<div>
-						<a href="/ublog-single"class="text-white">A great Start to a healthy life.</a>
-						<p class="text-sm mt-2 text-white-50">30 february 2019</p>
+						<p class="text-sm mt-2 text-white-50">Make life healthy.</p>
 					</div>
 					<div class="mt-4">
-						<a href="/ublog-single"class="text-white">Very Professional Club and coaches.</a>
-						<p class="text-sm mt-2 text-white-50">30 february 2019</p>
+						<p class="text-sm mt-2 text-white-50">Very Professional Club and coaches</p>
 					</div>
 
 				</div>
@@ -454,9 +383,10 @@
 					<h4 class="mb-4 text-white letter-spacing text-uppercase">Quick Links</h4>
 					<ul class="list-unstyled footer-menu lh-40 mb-0">
 						<li><a href="/uabout"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
-						<li><a href="/uservice"><i class="ti-angle-double-right mr-2"></i>Services</a></li>
+						<li><a href="/uproducts"><i class="ti-angle-double-right mr-2"></i>products</a></li>
+					
+
 						<li><a href="/upricing"><i class="ti-angle-double-right mr-2"></i>Membership</a></li>
-						<li><a href="/ucourse"><i class="ti-angle-double-right mr-2"></i>Courses</a></li>
 						<li><a href="/ucontact"><i class="ti-angle-double-right mr-2"></i>Contact us</a></li>
 					</ul>
 				</div>

@@ -110,50 +110,52 @@
           </ul>
         </div>
       </div>
-    </nav>
-    <form method="post">
-    <div class="container mt-5">
-      <div class="row tm-content-row">
-        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-12 tm-block-col">
-          <div class="tm-bg-primary-dark tm-block tm-block-products">
+      </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="text-white mt-5 mb-5">Welcome back     <b>Admin</b></p>
+                </div>
+            </div>
             
-            <div class="tm-product-table-container">
-              
-              <table class="table table-hover tm-table-small tm-product-table">
-                <thead>
+<div class="col-12 tm-block-col">
+                    <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
+                        <h2 class="tm-block-title">User's contact Details</h2>
+                        <table class="table">
+                            <thead>
                   <tr>
                     <th scope="col">&nbsp;</th>
-                    <th scope="col">PRODUCT NAME</th>
-                    <th scope="col">PRICE</th>
+                    <th scope="col">User NAME</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Message</th>
                     <th scope="col">&nbsp;</th>
                   </tr>
                 </thead>
                 <tbody>
-                @foreach($data as $value)
+
+                 @foreach($data as $value)
 
                 <tr>
                     <th scope="row"></th>
                     <td class="tm-product-name">{{ $value->name }}</td>
-                    <td>{{ $value->price }}</td>
+                    <td>{{ $value->email }}</td>
+                    <td>{{ $value->message }}</td>
                     <td>
-                      <a href= "/packages/{{$value->p_id}}"   class="tm-product-delete-link">
+                      <a href= "/contact/{{$value->id}}"   class="tm-product-delete-link">
                         <i class="far fa-trash-alt tm-product-delete-icon"></i>
                       </a>
                     </td>
                 </tr>
                   @endforeach
 
-                </tbody>
-              </table>
-            </div>
-            <!-- table container -->
-            <a href="/add-packages" class="btn btn-primary btn-block text-uppercase mb-3">Add new Package</a>
-            
-            <a href="/update-packages" class="btn btn-primary btn-block text-uppercase mb-3">Update Packages</a>
-          </div>
+                           </tbody>
+                         </table>
+                      </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
         </div>
-    </div>
-    </form>
 
 
     <footer class="tm-footer row tm-mt-small">

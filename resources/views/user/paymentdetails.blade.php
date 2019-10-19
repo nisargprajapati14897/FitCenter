@@ -92,33 +92,33 @@
 
 <!-- Section Blog start -->
 <section class="section blog bg-gray">
+<form method="GET" action="/generatePDF" enctype="multipart/form-data">
+
 	<div class="container">
 		<div class="row">
-		@foreach($data as $value)
 		<div class="col-lg-12 col-md-6">
 <article style="margin-left:25%; width:50%; box-shadow:0 0 10px grey;" class="card border-0 rounded-0 mb-4">
  	<div class="mt-3 px-4 py-3 " style="margin-left:4%; ">
-			<p class="mb-3 ">Name :{{ $value->name }}</p>
-			<p class="mb-3">Email : {{ $value->email }}</p>
+			<p class="mb-3 ">Name :{{ $value[0]->name }}</p>
+			<p class="mb-3">Email : {{ $value[0]->email }}</p>
 			<div class="blog-post-meta text-capitalize mb-2">
-				<p class=" mb-2">Contact : {{ $value->phone }}</p>
-				<p class="mb-3">apartment : {{ $value->apartment }}</p>
-				<p class="mb-3">area : {{ $value->area }}</p>
-				<p class="mb-3">landmark : {{ $value->landmark }}</p>
-				<p class="mb-3">city : {{ $value->city }}</p>
-				<p class="mb-3">pincode : {{ $value->pincode }}</p>
-				<p class="mb-3">state : {{ $value->state }}</p>
-				<p class="mb-3">product : {{ $value->productname }}</p>
-				<p class="mb-3">price : {{ $value->price }}</p>
+				<p class=" mb-2">Contact : {{ $value[0]->phone }}</p>
+				<p class="mb-3">apartment : {{ $value[0]->apartment }}</p>
+				<p class="mb-3">area : {{ $value[0]->area }}</p>
+				<p class="mb-3">landmark : {{ $value[0]->landmark }}</p>
+				<p class="mb-3">city : {{ $value[0]->city }}</p>
+				<p class="mb-3">pincode : {{ $value[0]->pincode }}</p>
+				<p class="mb-3">state : {{ $value[0]->state }}</p>
+				<p class="mb-3">product : {{ $value[0]->productname }}</p>
+				<p class="mb-3">price : {{ $value[0]->price }}</p>
 
 			</div>
 			
-				<a href=""  class="btn btn-main mt-3" style="width:30%; height:50px; margin-left:33%;">Print</a>
+				<button type="submit" class="btn btn-main mt-3" style="width:30%; height:50px; margin-left:33%;">Print</button>
 				
 		</div>
 	</article>
 </div>
-@endforeach
 
 
 

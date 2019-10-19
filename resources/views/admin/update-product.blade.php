@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Add Product - Dashboard HTML Template</title>
+    <title>Fit-Center Admin</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
@@ -27,7 +27,7 @@
     <nav class="navbar navbar-expand-xl">
       <div class="container h-100">
         <a class="navbar-brand" href="#">
-          <h1 class="tm-site-title mb-0">Product Admin</h1>
+          <h1 class="tm-site-title mb-0">Equipment Admin</h1>
         </a>
         <button
           class="navbar-toggler ml-auto mr-0"
@@ -60,9 +60,9 @@
                 aria-expanded="false"
               >
                 <i class="far fa-file-alt"></i>
-                <span> History <i class="fas fa-angle-down"></i> </span>
+                <span> products <i class="fas fa-angle-down"></i> </span>
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <<div class="dropdown-menu" aria-labelledby="navbarDropdown">
                  <a class="dropdown-item" href="/products">Health Products</a>
                  <a class="dropdown-item" href="/equipments">Gym Equipments</a>
                  <a class="dropdown-item" href="/doctors">Doctor</a>
@@ -96,11 +96,12 @@
                 aria-expanded="false"
               >
                 <i class="fas fa-cog"></i>
-                <span> Settings <i class="fas fa-angle-down"></i> </span>
+                <span> History <i class="fas fa-angle-down"></i> </span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/pastorder">Pastorder</a>
-              <a class="dropdown-item" href="/doctorstatus">Doctor Status</a>
+                <a class="dropdown-item" href="/pastorder">Pastorder</a>
+                <a class="dropdown-item" href="/doctorstatus">Doctor Status</a>
+                <a class="dropdown-item" href="/contactdetails">User Contacts</a>
               </div>
             </li>
           </ul>
@@ -166,25 +167,14 @@
                     />
                   </div>
                   <div class="row">
-                      <div class="form-group mb-3 col-xs-12 col-sm-6">
-                          <label
-                            for="expire_date"
-                            >Expire Date
-                          </label>
-                          <input
-                            id="expire_date"
-                            name="expire_date"
-                            type="text"
-                            class="form-control validate"
-                            data-large-mode="true"
-                          />
-                        </div>
-                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                      
+                  <div class="form-group mb-3 col-xs-12 col-sm-12">
                           <label
                             for="stock"
                             >Units In Stock
                           </label>
-                          <input id="stock"
+                          <input
+                            id="stock"
                             name="stock"
                             type="text"
                             class="form-control validate"
@@ -211,10 +201,11 @@
                   />
                   <br>
                   <br>
+                  </div>
                 </div>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block text-uppercase">Update Product Now</button>
+                <button type="submit" class="btn btn-primary btn-block text-uppercase">Update Product</button>
               </div>
               <!--<div class="form-group col-lg-12">
                   <label class="tm-hide-sm">&nbsp;</label>

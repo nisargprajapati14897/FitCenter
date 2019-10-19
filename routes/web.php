@@ -156,6 +156,15 @@ Route::get('/packages', function () {
     return view('admin.packages')->with('data', $data);
 });
 
+Route::get('/update-packages', function () {
+    return view('admin.update-packages');
+});
+
+Route::get('/contactdetails', function () {
+    $data = DB::table('contact')->select('*')->get();
+    return view('admin.contactdetails')->with('data', $data);;
+});
+
 Route::get('/update-equipment', function () {
     return view('admin.update-equipment');
 });
@@ -228,19 +237,23 @@ Route::post('/resetpassword','Controller@reset');
 
 Route::post('/add-equipment','Controller@equipmentinsert');
 Route::post('/update-equipment','Controller@equipmentupdate');
+Route::get('/equipments/{id}', 'Controller@equipmentdestroy');
 
 Route::post('/add-product','Controller@productinsert');
 Route::post('/update-product','Controller@productupdate');
+Route::get('/products/{id}', 'Controller@destroy');
 
 Route::post('/doctor','Controller@doctorinsert');
 Route::post('/update-doctor','Controller@doctorupdate');
-
-Route::get('/products/{id}', 'Controller@destroy');
-Route::get('/equipments/{id}', 'Controller@equipmentdestroy');
 Route::get('/doctors/{id}', 'Controller@doctordestroy');
 
 Route::post('/add-packages','Controller@packagesinsert');
+Route::post('/update-packages','Controller@packagesupdate');
+Route::get('/packages/{id}', 'Controller@packagesdestroy');
+
+
 Route::post('/search','Controller@search');
+Route::post('/searchorder','Controller@searchorder');
 
 Route::get('/checkoutform/{id}', 'Controller@checkoutform');
 Route::get('/equicheckoutform/{id}', 'Controller@equicheckoutform');
@@ -249,7 +262,7 @@ Route::get('/doccheckoutform/{id}', 'Controller@doccheckoutform');
 Route::post('/accounts','Controller@accountupdate');
 
 Route::post('/cart','Controller@cart');
-Route::post('/checkoutform','Controller@pdf');
+Route::get('generatePDF','Controller@pdf');
 
 Route::post('/checkoutform/{id}','Controller@orderinsert');
 Route::post('/equicheckoutform/{id}','Controller@orderinsert2');
@@ -259,4 +272,5 @@ Route::get('/memcheckout/{id}','Controller@memcheckout');
 Route::get('/changestatus/{id}','Controller@changestatus');
 Route::post('/membership/{p_id}','Controller@membership');
 
-   
+Route::post('/contact','Controller@contact');
+Route::get('/contact/{id}', 'Controller@contactdetailsdestroy');

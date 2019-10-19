@@ -55,9 +55,7 @@
 				  <li><a class="dropdown-item" href="/udoctor">Doctor</a></li>
 				</ul>
 		  </li>
-			 <li class="nav-item"><a class="nav-link" href="/ufitnesstips">Fitness Tips</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/upricing">Memebership</a></li>
-		   <li class="nav-item"><a class="nav-link" href="/ublog-single">Blog</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/ucontact">Contact</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/uabout">About Us</a></li>
 		</ul>
@@ -82,9 +80,7 @@
       <div class="col-lg-12 text-center">
           <ul class="list-inline mb-0">
             <li class="list-inline-item"><a href="/uindex" class="text-sm letter-spacing text-white text-uppercase font-weight-bold">Home</a></li>
-            <li class="list-inline-item"><span class="text-white">|</span></li>
-            <li class="list-inline-item"><a href="#" class="text-color text-uppercase text-sm letter-spacing">our blog</a></li>
-          </ul>
+           </ul>
            <h1 class="text-lg text-white mt-2">Gym Equpments</h1>
       </div>
     </div>
@@ -121,17 +117,7 @@
 
 	</div>
 
-		<div class="row justify-content-center mt-5">
-			<nav aria-label="Page navigation ">
-  <ul class="pagination justify-content-center">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>
-		</div>
+	
 	</div>
 </section>
 <!-- Section Blog End -->
@@ -151,14 +137,12 @@
 
 			<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
 				<div class="footer-widget recent-blog">
-					<h4 class="mb-4 text-white letter-spacing text-uppercase">Recents Posts</h4>
+					<h4 class="mb-4 text-white letter-spacing text-uppercase">our Moto</h4>
 					<div>
-						<a href="/ublog-single"class="text-white">A great Start to a healthy life.</a>
-						<p class="text-sm mt-2 text-white-50">30 february 2019</p>
+						<p class="text-sm mt-2 text-white-50">Make life healthy.</p>
 					</div>
 					<div class="mt-4">
-						<a href="/ublog-single"class="text-white">Very Professional Club and coaches.</a>
-						<p class="text-sm mt-2 text-white-50">30 february 2019</p>
+						<p class="text-sm mt-2 text-white-50">Very Professional Club and coaches</p>
 					</div>
 
 				</div>
@@ -167,10 +151,11 @@
 				<div class="footer-widget">
 					<h4 class="mb-4 text-white letter-spacing text-uppercase">Quick Links</h4>
 					<ul class="list-unstyled footer-menu lh-40 mb-0">
-						<li><a href="/uabout"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
-						<li><a href="/uservice"><i class="ti-angle-double-right mr-2"></i>Services</a></li>
+					<li><a href="/uabout"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
+						<li><a href="/uproducts"><i class="ti-angle-double-right mr-2"></i>products</a></li>
+					
+
 						<li><a href="/upricing"><i class="ti-angle-double-right mr-2"></i>Membership</a></li>
-						<li><a href="/ucourse"><i class="ti-angle-double-right mr-2"></i>Courses</a></li>
 						<li><a href="/ucontact"><i class="ti-angle-double-right mr-2"></i>Contact us</a></li>
 					</ul>
 				</div>

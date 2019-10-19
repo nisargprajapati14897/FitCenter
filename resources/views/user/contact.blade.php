@@ -55,9 +55,7 @@
 				  <li><a class="dropdown-item" href="/udoctor">Doctor</a></li>
 				</ul>
 		  </li>
-			 <li class="nav-item"><a class="nav-link" href="/ufitnesstips">Fitness Tips</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/upricing">Memebership</a></li>
-		   <li class="nav-item"><a class="nav-link" href="/ublog-single">Blog</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/ucontact">Contact</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/uabout">About Us</a></li>
 		</ul>
@@ -81,8 +79,6 @@
       <div class="col-lg-12 text-center">
           <ul class="list-inline mb-0">
             <li class="list-inline-item"><a href="index.html" class="text-sm letter-spacing text-white text-uppercase font-weight-bold">Home</a></li>
-            <li class="list-inline-item"><span class="text-white">|</span></li>
-            <li class="list-inline-item"><a href="#" class="text-color text-uppercase text-sm letter-spacing">contact</a></li>
           </ul>
            <h1 class="text-lg text-white mt-2">Contact Us</h1>
       </div>
@@ -103,22 +99,23 @@
 
          <div class="row justify-content-center pb-5">
             <div class="col-lg-9 text-center">
-                <form id="contact-form">
+                    <form method="post" action="{{url('contact')}}" enctype="multipart/form-data">
+                    {{ csrf_field() }}
                     <div class="form-row">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
+                   <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <input name="user_name" type="text" class="form-control" placeholder="Your Name">
+                                <input name="name" type="text" class="form-control" placeholder="Your Name">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <input name="user_email" type="text" class="form-control" placeholder="Email Address">
+                                <input name="email" type="text" class="form-control" placeholder="Email Address">
                             </div>
                         </div>
                        
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="form-group-2">
-                                <textarea name="user_message" class="form-control" rows="8" placeholder="Your Message"></textarea>
+                                <textarea name="message" class="form-control" rows="8" placeholder="Your Message"></textarea>
                             </div>
 
                             <div class="text-center">
@@ -180,14 +177,12 @@
 
 			<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
 				<div class="footer-widget recent-blog">
-					<h4 class="mb-4 text-white letter-spacing text-uppercase">Recents Posts</h4>
+        <h4 class="mb-4 text-white letter-spacing text-uppercase">our Moto</h4>
 					<div>
-						<a href="blog-single.html"class="text-white">A great Start to a healthy life.</a>
-						<p class="text-sm mt-2 text-white-50">30 february 2019</p>
+						<p class="text-sm mt-2 text-white-50">Make life healthy.</p>
 					</div>
 					<div class="mt-4">
-						<a href="blog-single.html"class="text-white">Very Professional Club and coaches.</a>
-						<p class="text-sm mt-2 text-white-50">30 february 2019</p>
+						<p class="text-sm mt-2 text-white-50">Very Professional Club and coaches</p>
 					</div>
 
 				</div>
@@ -196,10 +191,11 @@
 				<div class="footer-widget">
 					<h4 class="mb-4 text-white letter-spacing text-uppercase">Quick Links</h4>
 					<ul class="list-unstyled footer-menu lh-40 mb-0">
-						<li><a href="/uabout"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
-						<li><a href="/uservice"><i class="ti-angle-double-right mr-2"></i>Services</a></li>
+					<li><a href="/uabout"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
+						<li><a href="/uproducts"><i class="ti-angle-double-right mr-2"></i>products</a></li>
+					
+
 						<li><a href="/upricing"><i class="ti-angle-double-right mr-2"></i>Membership</a></li>
-						<li><a href="/ucourse"><i class="ti-angle-double-right mr-2"></i>Courses</a></li>
 						<li><a href="/ucontact"><i class="ti-angle-double-right mr-2"></i>Contact us</a></li>
 					</ul>
 				</div>

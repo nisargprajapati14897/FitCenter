@@ -55,9 +55,7 @@
 				  <li><a class="dropdown-item" href="/udoctor">Doctor</a></li>
 				</ul>
 		  </li>
-			 <li class="nav-item"><a class="nav-link" href="/ufitnesstips">Fitness Tips</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/upricing">Memebership</a></li>
-		   <li class="nav-item"><a class="nav-link" href="/ublog-single">Blog</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/ucontact">Contact</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/uabout">About Us</a></li>
 		</ul>
@@ -107,7 +105,7 @@
 
 					<p class="mb-4">One of the main reasons people are drawn to group fitness is the expert guidance they receive from certified instructors. An exceptional group fitness instructor is proficient in the art of creating enjoyable movement experiences that keep participants committed to their health and wellness journeys. There’s no guesswork when it comes to how to structure your workout session.</p>
 
-					<a href="/upricing" class="btn btn-main">Services<i class="ti-angle-right ml-2"></i></a>
+					<a href="/upricing" class="btn btn-main">Membership<i class="ti-angle-right ml-2"></i></a>
 				</div>
 			</div>
 		</div>
@@ -252,15 +250,15 @@
 
 			<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
 				<div class="footer-widget recent-blog">
-					<h4 class="mb-4 text-white letter-spacing text-uppercase">Recents Posts</h4>
+				<h4 class="mb-4 text-white letter-spacing text-uppercase">our Moto</h4>
 					<div>
-						<a href="/ublog-single"class="text-white">A great Start to a healthy life.</a>
-						<p class="text-sm mt-2 text-white-50">30 february 2019</p>
+						<p class="text-sm mt-2 text-white-50">Make life healthy.</p>
 					</div>
 					<div class="mt-4">
-						<a href="/ublog-single"class="text-white">Very Professional Club and coaches.</a>
-						<p class="text-sm mt-2 text-white-50">30 february 2019</p>
+						<p class="text-sm mt-2 text-white-50">Very Professional Club and coaches</p>
 					</div>
+
+
 
 				</div>
 			</div>
@@ -268,10 +266,11 @@
 				<div class="footer-widget">
 					<h4 class="mb-4 text-white letter-spacing text-uppercase">Quick Links</h4>
 					<ul class="list-unstyled footer-menu lh-40 mb-0">
-						<li><a href="/uabout"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
-						<li><a href="/uservice"><i class="ti-angle-double-right mr-2"></i>Services</a></li>
+					<li><a href="/uabout"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
+						<li><a href="/uproducts"><i class="ti-angle-double-right mr-2"></i>products</a></li>
+					
+
 						<li><a href="/upricing"><i class="ti-angle-double-right mr-2"></i>Membership</a></li>
-						<li><a href="/ucourse"><i class="ti-angle-double-right mr-2"></i>Courses</a></li>
 						<li><a href="/ucontact"><i class="ti-angle-double-right mr-2"></i>Contact us</a></li>
 					</ul>
 				</div>

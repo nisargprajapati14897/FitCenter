@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Login Page - Product Admin Template</title>
+    <title>Fit-Center Admin</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
@@ -109,11 +109,11 @@
                  
                 </form>
                 <div class="form-group mt-4">
-                <button class="btn btn-primary btn-block text-uppercases"><span><span></span></span>
                 <a href="{{url('/forgotpassword')}}">
+ <button class="btn btn-primary btn-block text-uppercases"><span><span></span></span>
                     Forgot your password?
-                </a>
-                </button>
+             
+                </button>   </a>
                 </div>
               </div>
             </div>

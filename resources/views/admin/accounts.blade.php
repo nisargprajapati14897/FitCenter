@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Accounts - Product Admin Template</title>
+    <title>Fit-Center Admin</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
@@ -100,6 +100,7 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/pastorder">Pastorder</a>
                 <a class="dropdown-item" href="/doctorstatus">Doctor Status</a>
+                <a class="dropdown-item" href="/contactdetails">User Contacts</a>
               </div>
               </li>
             </ul>

@@ -55,9 +55,7 @@
 				  <li><a class="dropdown-item" href="/udoctor">Doctor</a></li>
 				</ul>
 		  </li>
-			 <li class="nav-item"><a class="nav-link" href="/ufitnesstips">Fitness Tips</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/upricing">Memebership</a></li>
-		   <li class="nav-item"><a class="nav-link" href="/ublog-single">Blog</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/ucontact">Contact</a></li>
 		   <li class="nav-item"><a class="nav-link" href="/uabout">About Us</a></li>
 		</ul>
@@ -80,8 +78,6 @@
       <div class="col-lg-12 text-center">
           <ul class="list-inline mb-0">
             <li class="list-inline-item"><a href="/uindex" class="text-sm letter-spacing text-white text-uppercase font-weight-bold">Home</a></li>
-            <li class="list-inline-item"><span class="text-white">|</span></li>
-            <li class="list-inline-item"><a href="#" class="text-color text-uppercase text-sm letter-spacing">Pricing</a></li>
           </ul>
            <h1 class="text-lg text-white mt-2">Memebership </h1>
       </div>
@@ -152,7 +148,7 @@
 									<li class="text-white-50"><i class="ti-close mr-3"></i>Steam bath </li>
 								@endif
 								<br>
-								<a href="/memcheckout/{{ $value->p_id }}"  class="btn btn-main mt-3">Buy Membership</a>
+								<a href="/memcheckout/{{ $value->p_id }}" class="btn btn-main mt-3">Buy Membership</a>
 							</ul>
 						</div>
 					</div>
@@ -164,133 +160,7 @@
 <!-- Section pricing End -->
 
 <!-- Section Course Start -->
-<section class="section course">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-8 text-center">
-				<div class="section-title">
-					<div class="divider mb-3"></div>
-					<h2>Gym Trainers</h2>
-				</div>
-			</div>
-		</div>
 
-		<div class="row">
-			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 mb-5">
-					<img src="user/images/gallery/course-1.jpg" alt="" class="img-fluid">
-
-					<div class="card-body">
-						<a href="/ucourse-single"><h4 class="mt-3 mb-0">Build Body</h4></a>
-						<p class=" mb-2">Mentor: Jaydeep Parmar</p>
-						<ul class="list-inline">
-							<li class="list-inline-item">
-								<i class="ti-time mr-2 text-color"></i>Monday-Saturday :
-							</li>
-							<li class="list-inline-item text-black">
-								<strong>7am-12pm</strong>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 mb-5">
-					<img src="user/images/gallery/course-2.jpg" alt="" class="img-fluid">
-
-					<div class="card-body">
-						<a href="/ucourse-single"><h4 class="mt-3 mb-0">Yoga</h4></a>
-						<p class=" mb-2">Mentor: Nisarg Prajapati</p>
-						<ul class="list-inline">
-							<li class="list-inline-item">
-								<i class="ti-time mr-2 text-color"></i>Monday-Saturday :
-							</li>
-							<li class="list-inline-item text-black">
-								<strong>7am-12pm</strong>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 mb-5">
-					<img src="user/images/gallery/course-1.jpg" alt="" class="img-fluid">
-
-					<div class="card-body">
-						<a href="/ucourse-single"><h4 class="mt-3 mb-0">Weight Lifting</h4></a>
-						<p class=" mb-2">Mentor: Jaydeep Trivedi</p>
-						<ul class="list-inline">
-							<li class="list-inline-item">
-								<i class="ti-time mr-2 text-color"></i>Monday-Saturday :
-							</li>
-							<li class="list-inline-item text-black">
-								<strong>7am-12pm</strong>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 ">
-					<img src="user/images/gallery/course-1.jpg" alt="" class="img-fluid">
-
-					<div class="card-body">
-						<a href="/ucourse-single"><h4 class="mt-3 mb-0">Cardio</h4></a>
-						<p class=" mb-2">Mentor: Zankar Joshi</p>
-						<ul class="list-inline">
-							<li class="list-inline-item">
-								<i class="ti-time mr-2 text-color"></i>Saturday-Sunday :
-							</li>
-							<li class="list-inline-item text-black">
-								<strong>7am-12pm</strong>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 ">
-					<img src="user/images/gallery/course-2.jpg" alt="" class="img-fluid">
-
-					<div class="card-body">
-						<a href="/ucourse-single"><h4 class="mt-3 mb-0">Zumba</h4></a>
-						<p class=" mb-2">Mentor: Savan </p>
-						<ul class="list-inline">
-							<li class="list-inline-item">
-								<i class="ti-time mr-2 text-color"></i>Saturday-Sunday :
-							</li>
-							<li class="list-inline-item text-black">
-								<strong>7am-12pm</strong>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 ">
-					<img src="user/images/gallery/course-1.jpg" alt="" class="img-fluid">
-
-					<div class="card-body">
-						<a href="/ucourse-single"><h4 class="mt-3 mb-0">aerobics</h4></a>
-						<p class=" mb-2">Mentor: Zala Parth</p>
-						<ul class="list-inline">
-							<li class="list-inline-item">
-								<i class="ti-time mr-2 text-color"></i>Monday-Saturday :
-							</li>
-							<li class="list-inline-item text-black">
-								<strong>7am-12pm</strong>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
 <!-- Section Course ENd -->
 
 
@@ -308,14 +178,12 @@
 
 			<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
 				<div class="footer-widget recent-blog">
-					<h4 class="mb-4 text-white letter-spacing text-uppercase">Recents Posts</h4>
+				<h4 class="mb-4 text-white letter-spacing text-uppercase">our Moto</h4>
 					<div>
-						<a href="/ublog-single"class="text-white">A great Start to a healthy life.</a>
-						<p class="text-sm mt-2 text-white-50">30 february 2019</p>
+						<p class="text-sm mt-2 text-white-50">Make life healthy.</p>
 					</div>
 					<div class="mt-4">
-						<a href="/ublog-single"class="text-white">Very Professional Club and coaches.</a>
-						<p class="text-sm mt-2 text-white-50">30 february 2019</p>
+						<p class="text-sm mt-2 text-white-50">Very Professional Club and coaches</p>
 					</div>
 
 				</div>
@@ -324,12 +192,13 @@
 				<div class="footer-widget">
 					<h4 class="mb-4 text-white letter-spacing text-uppercase">Quick Links</h4>
 					<ul class="list-unstyled footer-menu lh-40 mb-0">
-						<li><a href="/uabout"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
-						<li><a href="/uservice"><i class="ti-angle-double-right mr-2"></i>Services</a></li>
+					<li><a href="/uabout"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
+						<li><a href="/uproducts"><i class="ti-angle-double-right mr-2"></i>products</a></li>
+					
+
 						<li><a href="/upricing"><i class="ti-angle-double-right mr-2"></i>Membership</a></li>
-						<li><a href="/ucourse"><i class="ti-angle-double-right mr-2"></i>Courses</a></li>
 						<li><a href="/ucontact"><i class="ti-angle-double-right mr-2"></i>Contact us</a></li>
-					</ul>
+						</ul>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-5">
